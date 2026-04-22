@@ -8,7 +8,7 @@ export default defineConfig({
   workers: 1,
   reporter: [['list'], ['html', { open: 'never' }]],
   use: {
-    baseURL: process.env.APP_URL || 'http://localhost:3964',
+    baseURL: process.env.APP_URL || 'http://localhost:3965',
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
@@ -23,8 +23,8 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'php artisan serve --host=127.0.0.1 --port=3964',
-    url: 'http://127.0.0.1:3964',
+    command: 'php artisan serve --host=127.0.0.1 --port=3965',
+    url: 'http://127.0.0.1:3965',
     reuseExistingServer: !process.env.CI,
     timeout: 30_000,
   },
