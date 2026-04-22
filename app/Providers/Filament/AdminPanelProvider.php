@@ -7,6 +7,7 @@ use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\NavigationItem;
 use Filament\Pages\Dashboard;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -35,7 +36,25 @@ class AdminPanelProvider extends PanelProvider
             ->navigationGroups([
                 'Workspace',
                 'CRM',
+                'Linki zewnetrzne',
                 'Administracja',
+            ])
+            ->navigationItems([
+                NavigationItem::make('Chat (chat.octadecimal.cloud)')
+                    ->url('https://chat.octadecimal.cloud', shouldOpenInNewTab: true)
+                    ->icon('heroicon-o-chat-bubble-left-right')
+                    ->group('Linki zewnetrzne')
+                    ->sort(1),
+                NavigationItem::make('CRM (crm.octadecimal.cloud)')
+                    ->url('https://crm.octadecimal.cloud', shouldOpenInNewTab: true)
+                    ->icon('heroicon-o-rectangle-group')
+                    ->group('Linki zewnetrzne')
+                    ->sort(2),
+                NavigationItem::make('n8n (n8n.octadecimal.cloud)')
+                    ->url('https://n8n.octadecimal.cloud', shouldOpenInNewTab: true)
+                    ->icon('heroicon-o-bolt')
+                    ->group('Linki zewnetrzne')
+                    ->sort(3),
             ])
             ->brandName('Octadecimal CRM')
             ->discoverResources(in: app_path('Filament/Admin/Resources'), for: 'App\Filament\Admin\Resources')
