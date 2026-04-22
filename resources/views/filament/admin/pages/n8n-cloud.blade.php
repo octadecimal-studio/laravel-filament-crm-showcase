@@ -1,5 +1,8 @@
 <x-filament-panels::page>
-    <div class="flex items-center justify-end gap-2 mb-2">
+    <div class="flex items-center justify-between gap-2 mb-2">
+        <p class="text-xs text-gray-500 dark:text-gray-400">
+            Jesli iframe jest pusty &mdash; otworz raz w nowej karcie, zaloguj sie przez Cloudflare Access (OTP) i odswiez.
+        </p>
         <a
             href="{{ $url }}"
             target="_blank"
