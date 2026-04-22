@@ -4,6 +4,7 @@ namespace App\Filament\Admin\Pages;
 
 use BackedEnum;
 use Filament\Pages\Page;
+use Filament\Support\Enums\Width;
 
 class N8nCloud extends Page
 {
@@ -18,6 +19,8 @@ class N8nCloud extends Page
     protected static ?string $title = 'n8n - automatyzacje workflow';
 
     protected static ?string $slug = 'n8n';
+
+    protected Width|string|null $maxContentWidth = Width::Full;
 
     protected string $view = 'filament.admin.pages.n8n-cloud';
 
