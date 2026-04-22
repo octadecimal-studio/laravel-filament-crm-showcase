@@ -62,6 +62,6 @@ class CrmTask extends Model
         return LogOptions::defaults()
             ->logOnly(['title', 'status', 'due_at', 'assignee_id'])
             ->logOnlyDirty()
-            ->dontSubmitEmptyLogs();
+            ->dontLogEmptyChanges();
     }
 }

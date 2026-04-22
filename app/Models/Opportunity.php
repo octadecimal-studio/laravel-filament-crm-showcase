@@ -78,6 +78,6 @@ class Opportunity extends Model
         return LogOptions::defaults()
             ->logOnly(['name', 'stage', 'amount', 'currency', 'close_date', 'probability'])
             ->logOnlyDirty()
-            ->dontSubmitEmptyLogs();
+            ->dontLogEmptyChanges();
     }
 }

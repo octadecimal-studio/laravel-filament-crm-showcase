@@ -43,6 +43,6 @@ class CrmNote extends Model
         return LogOptions::defaults()
             ->logOnly(['body', 'created_by'])
             ->logOnlyDirty()
-            ->dontSubmitEmptyLogs();
+            ->dontLogEmptyChanges();
     }
 }

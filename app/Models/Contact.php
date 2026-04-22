@@ -65,6 +65,6 @@ class Contact extends Model
         return LogOptions::defaults()
             ->logOnly(['first_name', 'last_name', 'email', 'phone', 'company_id'])
             ->logOnlyDirty()
-            ->dontSubmitEmptyLogs();
+            ->dontLogEmptyChanges();
     }
 }
