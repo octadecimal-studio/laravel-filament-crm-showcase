@@ -4,6 +4,7 @@ namespace App\Filament\Admin\Pages;
 
 use BackedEnum;
 use Filament\Pages\Page;
+use Filament\Support\Enums\Width;
 
 class ChatCloud extends Page
 {
@@ -18,6 +19,8 @@ class ChatCloud extends Page
     protected static ?string $title = 'Chat - komunikacja zespolowa';
 
     protected static ?string $slug = 'chat';
+
+    protected Width|string|null $maxContentWidth = Width::Full;
 
     protected string $view = 'filament.admin.pages.chat-cloud';
 
